@@ -422,6 +422,8 @@ function collectText() {
   //After hideing the text img of minus button change to plus button but the checkbox with id #addNewNotes is checked not changed to uncheck. Because of that when we want to write new notes then we have to click two time first for uncheck and then when we click again the text area will unhide.
   //That why I unchecked it forcefully.
   addNewNotes.checked = false;
+  
+   document.activeElement.blur();
 
   //This is for scroll to bottom where new notes is added. It is working on cumputer but not in mobile. I think may be for developer tag. 
   window.scrollTo(0, document.body.scrollHeight);
