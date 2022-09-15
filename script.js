@@ -65,7 +65,7 @@ const developerNameDiv = document.getElementById("developerNameDiv");       //Yo
 
 //When we reload page or open this page it will check if there is no notes then by default writing area will be active
 addEventListener('load',showNotes);
-addEventListener('load', hideDeveloperName);
+//addEventListener('load', hideDeveloperName);
 
 
 
