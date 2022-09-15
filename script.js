@@ -297,8 +297,10 @@ function showNotes() {
 
   if(imptortantNotesPageID.checked == true){
     importantNotesPage();
+    window.scrollTo(0, document.body.scrollHeight);
   } else{
     allNotesPage();
+    window.scrollTo(0, document.body.scrollHeight);
   }
 
 }
@@ -421,7 +423,7 @@ function collectText() {
   addNewNotes.checked = false;
 
   //This is for scroll to bottom where new notes is added. It is working on cumputer but not in mobile. I think may be for developer tag. 
-  window.scrollTo(0, document.body.scrollHeight);
+  
 }
 
 
