@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" media="screen and (min-width: 500px)" href="style.css" />
+  <link rel="stylesheet" media="screen and (max-width: 499.9px)" href="mobile.css" />
+  <title>Note App</title>
+</head>
+
+<body>
+  <div class="" id="navbarParent">
+    <nav class="navbar">
+      <input type="checkbox" name="addNewNotes" id="addNewNotes" />
+      <label for="addNewNotes" class="addNewNotesClass" onclick="hideAndShowTextArea()"><img src="new-notes.png" alt=""
+          srcset="" /></label>
+
+      <ul class="dropdown">
+        <div class="dropbtn">
+          <img src="advance-search.png" alt="dropdown button" class="dropimg" />
+        </div>
+        <div class="list">
+          <form>
+            <input type="radio" id="inTitleSearch" name="fav_language" value="HTML" class="radioSearch" />
+            <label for="inTitleSearch" class="a">In Title</label>
+            <input type="radio" id="inNotesSearch" name="fav_language" value="CSS" class="radioSearch" />
+            <label for="inNotesSearch" class="a">In Notes</label>
+            <input type="radio" id="inDateSearch" name="fav_language" value="JavaScript" class="radioSearch" />
+            <label for="inDateSearch" class="a">In Date</label>
+            <input type="radio" id="inAllNotes" name="fav_language" value="New Bal" class="radioSearch" checked />
+            <label for="inAllNotes" class="a">In All Notes</label>
+          </form>
+        </div>
+      </ul>
+
+      <input type="text" placeholder="search here" id="searchText" onkeyup="searchTextFunc()" />
+      <input type="button" id="clearSearchBox" value="X" onclick="clearSearchBoxFunc()" />
+    </nav>
+    <div id="welcomeTagDiv">
+      <h3 id="welcomeTag">Welcome to our notes app</h3>
+
+      <input type="checkbox" name="imptortantNotesPageID" id="imptortantNotesPageID" />
+      <label for="imptortantNotesPageID" class="imptortantNotesPageClass" onclick="importantNotesList()"><img
+          src="grayHeart.png" alt="" srcset="" /></label>
+    </div>
+  </div>
+
+  <div id="importantTick">0</div>
+  <div id="container">
+    <form onsubmit="return false">
+      <textarea class="textareaClass" name="titleText" id="titleText" cols="40" rows="1" spellcheck="true"
+        placeholder="Write your Title" autofocus autocomplete="on"></textarea>
+      <textarea class="textareaClass" name="notesText" id="notesText" cols="45" rows="10" spellcheck="true"
+        placeholder="Write your Notes" oninput="autoGrow(this)"></textarea>
+
+      <br /><input type="submit" value="Submit" id="submitButton" onclick="collectText()" />
+      <br /><input type="submit" value="Discard" id="discardButton" onclick="discardText()" />
+      <br /><input type="submit" value="Save Changes" id="submitButtonAfterEdit" onclick="collectTextOnEdit()" />
+      <br /><input type="submit" value="Discard Changes" id="discardButtonAfterEdit" onclick="discardEdit()" />
+      <span id="notesIdAtEdit"></span>
+    </form>
+  </div>
+
+  <div id="savedNotesWelcomeAreaBarParent">
+    <div id="savedNotesWelcomeAreaBar">
+      <div id="savedNotesWelcomeAreaBarText">Your all notes are below</div>
+      <input type="button" value="Delete All Notes" onclick="deleteAllNotes()" id="deleteAllNotess" />
+    </div>
+    <hr class="hrTag" />
+    <hr />
+  </div>
+
+  <div id="notesMainContainer"></div>
+  <div id="suggetionParaDiv">
+    <p id="suggetionPara">
+      Please Write Some Notes and click on the little Heart to your important
+      notes or directly go to the important section and write there to add in
+      your important list.
+    </p>
+  </div>
+
+  <div id="developerNameDiv">Developed by Rakesh Singh</div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,555 @@
+*{
+    margin: 0vw;
+    padding: 0vw;
+    font-family: sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Nav Bar CSS Starts*/
+#navbarParent{
+    position: fixed;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: rgb(23, 0, 59);
+    margin-top: -8rem;
+    height: 4rem;
+    width: 100vw;
+    z-index: 100;
+
+}
+
+#welcomeTagDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    border: none;
+    background-color: white;
+    z-index: 100;
+}
+
+#welcomeTag{
+    font-size: 1rem;
+}
+
+
+#addNewNotes {
+    display: none;
+}
+
+.addNewNotesClass {
+    position: absolute;
+    display: none;
+    height: 2.4rem;
+    width: 11vw;
+    padding: 0px;
+    z-index: 100;
+    /* background-color: rgb(221, 47, 47); */
+    margin-left: 3vw;
+    border-radius: 2vw;
+}
+
+.addNewNotesClass img {
+    position: absolute;
+    display: flex;
+    height: 2.5rem;
+    width: 12vw;
+    padding-left: .4vw;
+    z-index: 100;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2vw;
+}
+
+
+
+
+.addNewNotesClass:active{
+    filter: invert(100%);
+
+
+}
+
+
+
+
+
+
+.dropbtn {
+    display: block;
+    height: 1.4rem;
+    width: 6vw;
+    margin: 0px;
+    /* padding-left: 1.5vw;
+    padding-right: 1.5vw; */
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border: .1vw solid rgb(179, 179, 179);
+    border-radius: .5vw;
+}
+
+.dropimg {
+    position: absolute;
+    display: flex;
+    height: 1.35rem;
+    width: 5.5vw;
+    margin: 0px;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    background-color: white;
+    border-radius: 1.25vw;
+}
+
+
+.dropdown {
+    position: absolute;
+    display: flex;
+    height: 1.5rem;
+    width: 9vw;
+    margin-left: 23.5vw;
+    padding: 0px;
+}
+
+
+
+#searchText{
+    display: flex;
+    margin-left: 22vw;
+    width: 60vw;
+    height: 1.3rem;
+    padding: .21rem 2vw .21rem 11vw;
+    font-size: 4vw;
+    background-color: white;
+    border-radius: .5vw;
+}
+
+#clearSearchBox{
+    margin-left: -7.5vw;
+    width: 6.5vw;
+    height: 1.5rem;
+    font-size: 3.5vw;
+    font-weight: bold;
+}
+
+
+.list {
+    display: none;
+    position: absolute;
+    min-width: 25vw;
+    min-height: 8rem;
+    margin-top: 2.5rem;
+    margin-left: -.8vw;
+    padding-top: .21rem;
+    list-style: none;
+    /* z-index: 1; */
+    box-sizing: border-box;
+}
+
+.list::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(23, 0, 59);
+    min-width: 30vw;
+    min-height: 8.5rem;
+    list-style: none;
+    border-radius: 0px 0px 10px 10px;
+    z-index: -1;
+    opacity: .9;
+}
+
+.radioSearch{
+    display: none;
+}
+
+.navbar ul .list .a {
+    display: flex;
+    align-items: center;
+    color: white;
+    width: 25vw;
+    height: 7vw;
+    padding: .1vh 0vw .1vh 2.5vw;
+    font-size: 4vw;
+    font-weight: bold;
+    margin-top: 0vw;
+    text-decoration: none;
+    border-radius: 1vw;
+
+}
+
+.navbar ul .list .a:active {
+    background-color: white;
+    color: black;
+}
+
+.dropdown:hover .list {
+    display: block;
+    z-index: 10000;
+}
+
+.dropimg:active{
+filter: invert(30%);
+}
+
+
+/* Nav Bar CSS Ended*/
+
+
+
+
+#container{
+    display: flex;
+    position: relative;
+    top: 0rem;
+    margin: 8rem auto 1rem auto;
+    width: 90vw;
+    font-size: 1vw;
+    /* border: 1px solid black; */
+    /* z-index: -1; */
+} 
+
+
+.textareaClass{
+    padding: .21rem 2vw;
+    font-size: 4vw;
+    width: 85vw;
+    border-color: rgb(169, 127, 209);
+    /* border: 1px solid rgb(0, 0, 0); */
+        /* z-index: -1; */
+}
+
+#titleText{
+    display: none;
+    margin: 0rem auto .5rem auto;
+    height: 2rem;
+    border: .1vw solid black;
+}
+
+#notesText{
+    display: none;
+    /* resize: none; */
+    overflow: hidden;
+    margin: .21rem auto 0vh auto;
+    height: 5rem;
+    max-height: 25rem;
+    border: .1vw solid black;
+}
+
+
+
+.hrTag{
+margin-top: .5rem;
+
+}
+
+#savedNotesWelcomeAreaBarParent{
+    display: none;
+    margin-top: 3rem;
+}
+
+#savedNotesWelcomeAreaBar{
+    margin: 0rem auto 0rem auto;
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    background-color: rgb(189, 189, 189);
+    width: 90.5vw;
+}
+
+
+#savedNotesWelcomeAreaBarText{
+    padding-left: 2vw;
+    font-size: 4vw;
+    font-weight: bold;
+    width: 53vw;
+    /* border: 1px solid black; */
+}
+
+#deleteAllNotess{
+    background-color: rgb(182, 0, 0);
+    color: white;
+    border-radius: 1vw;
+    cursor: pointer;
+    border: none;
+    width: 34vw;
+    height: 1.5rem;
+    font-size: 3vw;
+    font-weight: bold;
+
+
+  }
+
+
+#notesMainContainer{
+    display: grid;
+    grid-template-columns: repeat(1, 90vw);
+    width: 90vw;
+    /* background-color: rgb(238, 238, 238); */
+    border-radius: .5vw;  
+    margin-top: 0rem;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding-bottom: 3rem;
+}
+
+.titleContainer{
+    padding: .25rem 5vw .5rem 2vw;
+    border-radius: 1vw 1vw 0vw 0vw;
+    width: 83vw;
+    min-height: 1.6rem;
+    background-color: rgb(41, 40, 40);
+    color: white;
+    font-weight: bold;
+    font-size: 3.25vw;
+    /* z-index: -1; */
+
+}
+
+#allNotesPageID{
+
+    display: none;
+}
+
+#imptortantNotesPageID{
+display: none
+}
+
+.imptortantNotesPageClass{
+    position: absolute;
+    display: flex;
+    /* border: 1vw solid black; */
+    margin-left: 82vw;
+}
+
+.imptortantNotesPageClass img{
+    width: 8vw;
+
+
+}
+
+
+/* dfdfsdfgsdg*/
+
+
+.toolDivInAllNotes{
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    border: .1vw solid rgb(199, 199, 199);
+    width: 97.7%;
+    height: 1.6rem;
+
+    color: rgb(92, 92, 92);
+}
+
+.timeClassSpan{
+    /* border: .1vh solid black; */
+    width: 41%;
+    font-size: 3.5vw;
+}
+
+
+
+.editNotesItemClass{
+    margin-left: 40%;
+    width: 3.25vw;
+    height: 4.2vw;
+    /* border: .1vh solid black; */
+}
+
+.editNotesItemClass img{
+    width: 4.25vw;
+    /* border: .1vh solid black; */
+
+}
+
+.editNotesItemClass img:active{
+    filter: invert(33%) sepia(100%) saturate(6230%) hue-rotate(331deg) brightness(101%) contrast(101%);
+}
+
+
+
+
+.editClass{
+    display: none;
+}
+
+
+#importantTick{
+
+    display: none;
+    
+  }
+
+
+.importantNotesItemClass{
+
+    margin-left: 4vw;
+    width: 4vw;
+    height: 4vw;
+    /* border: .1vh solid black; */
+
+}
+
+.importantNotesItemClass img{
+    width: 5vw;
+    /* border: .1vh solid black; */
+
+
+}
+.importantClass{
+    display: none;
+}
+
+
+
+
+#suggetionParaDiv{
+
+    display: none;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2rem;
+    /* height: 5rem; */
+    /* border: 1vw solid black; */
+} 
+
+#suggetionParaDiv p{
+    display: flex;
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    /* height: 5rem; */
+    /* border: 1vw solid black; */
+    padding-left: 1vw;
+    padding-bottom: 9vh;
+    font-size: 1.2rem;
+    color: rgb(128, 128, 128);
+}
+
+.notesContainer{
+    padding: .25rem 3vw .5rem 2vw;
+    width: 84vw;
+    min-height: 4rem;
+    background-color: rgb(255, 254, 236);
+    font-size: 3.5vw;
+    border-radius: 0vw 0vw 1vw 1vw;
+    /* z-index: -1; */
+}
+
+
+
+
+
+.deleteButton{
+    position: absolute;
+    margin-left: 83vw;
+    margin-top: 0.21rem;
+    height: 1rem;
+    width: 6vw;
+    background-color: rgb(182, 0, 0);
+    font-size: 2vw;
+    color: white;
+    border-radius: 1vw;
+    cursor: pointer;
+    border: none;
+    /* z-index: -2; */
+}
+
+
+#submitButton{
+    display: none;
+    margin-top: .44rem;
+    height: 1.75rem;
+    width: 90vw;
+    background-color: rgb(0, 19, 231);
+    font-size: 3.5vw;
+    font-weight: bold;
+    color: white;
+    border-radius: 1vw;
+    cursor: pointer;
+    border: none;
+}
+
+#discardButton{
+    display: none;
+    margin-top: .44rem;
+    height: 1.75rem;
+    width: 90vw;
+    background-color: rgb(131, 0, 0);
+    font-size: 3.5vw;
+    font-weight: bold;
+    color: white;
+    border-radius: 1vw;
+    cursor: pointer;
+    border: none;
+}
+
+#submitButtonAfterEdit{
+    display: none;
+    margin-top: .18rem;
+    height: 1.75rem;
+    width: 90vw;
+    background-color: rgb(0, 19, 231);
+    font-size: 3.5vw;
+    font-weight: bold;
+    color: white;
+    border-radius: 1vw;
+    cursor: pointer;
+    border: none;
+}
+
+#discardButtonAfterEdit{
+    display: none;
+    margin-top: .44rem;
+    height: 1.75rem;
+    width: 90vw;
+    background-color: rgb(131, 0, 0);
+    font-size: 3.5vw;
+    font-weight: bold;
+    color: white;
+    border-radius: 1vw;
+    cursor: pointer;
+    border: none;
+}
+
+#notesIdAtEdit{
+    display: none;
+}
+
+
+.formClass{
+    width: 90vw;
+    background-color: rgb(255, 254, 236);
+    border-radius: 1vw;
+    margin: 1rem 0vw 0rem 0vw;
+    border: .1vw solid black;
+}
+
+
+
+
+#developerNameDiv{
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    bottom: 0vh;
+    justify-content: center;
+    font-size: .6rem;
+    align-items: center;
+    background-color: rgb(23, 0, 59);
+    height: 2.5rem;
+
+    /* z-index: 100; */
+    color: white;
+}

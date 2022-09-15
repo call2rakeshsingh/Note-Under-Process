@@ -1,0 +1,156 @@
+*{
+  margin: 0vw;
+  padding: 0vw;
+  font-family: sans-serif;
+  /* border: none; */
+}
+
+h3{
+  margin-top: 4vh;
+  text-align: center;
+  font-size: 2vw;
+}
+
+#notesMainContainer{
+  display: grid;
+  grid-template-columns: repeat(2, 31vw);
+  margin-top: 4vh;
+  width: 62vw;
+  /* background-color: rgb(219, 206, 255); */
+  border-radius: .5vw;    
+}
+
+.textareaClass{
+  padding: .5vh .5vw;
+  width: 59vw;
+  border-color: rgb(169, 127, 209);
+  font-size: 1.2vw;
+}
+
+#titleText{
+
+  margin: 1vh auto 0vh auto;
+  height: 3vh;
+  border: .1vw solid black;
+}
+
+#notesText{
+  margin: 0vh auto 0vh auto;
+  height: 20vh;
+  border: .1vw solid black;
+}
+
+.container{
+  margin: 1vh auto;
+  height: 20vh;
+  width: 60vw;
+  font-size: 1vw;
+}
+
+.titleContainer{
+  /* margin: -.1vw; */
+  padding: 1vh 1vw;
+  border-radius: 1vw 1vw 0vw 0vw;
+  width: 27vw;
+  background-color: rgb(90, 90, 90);
+  color: white;
+  font-weight: bold;
+  font-size: 1.1vw;
+
+}
+
+
+.notesContainer{
+  padding: 1vh 1vw;
+  width: 27vw;
+  background-color: rgb(207, 207, 207);
+  font-size: 1.1vw;
+  border-radius: 0vw 0vw 1vw 1vw;
+}
+
+.importantClass{
+  /* position: absolute; */
+  margin-left: 27vw;
+  margin-top: -5vh;
+  height: 3vh;
+  width: 1.5vw;
+  background-color: rgb(85, 85, 85);
+  background-color: rgb(206, 255, 255);
+
+}
+
+
+
+input[type="checkbox"] {
+  width: 1.25vw;
+}
+
+
+.deleteButton{
+  position: absolute;
+  margin-left: 26.5vw;
+  margin-top: 0.6vh;
+  height: 3vh;
+  width: 2vw;
+  background-color: rgb(182, 0, 0);
+  font-size: 1vw;
+  color: white;
+  border-radius: .25vw;
+  cursor: pointer;
+  border: none;
+}
+
+
+#submitButton{
+  margin-top: 1vh;
+  height: 5vh;
+  width: 10vw;
+  background-color: rgb(0, 19, 231);
+  font-size: 1vw;
+  color: white;
+  border-radius: .25vw;
+  cursor: pointer;
+  border: none;
+}
+
+
+.formClass{
+  width: 29vw;
+  background-color: rgb(207, 207, 207);
+  border-radius: 1vw;
+  margin-right: 5vw;
+  margin-bottom: 1vh;
+  border: .1vw solid black;
+}
+
+
+.searchBoxForm{
+  display: flex;
+  margin-top: 3vh;
+  margin-left: 20vw;
+}
+
+
+
+#searchText{
+  padding: .5vh .5vw;
+  font-size: 1vw;
+  border: .1vw solid black;
+  font-size: 1.2vw;
+}
+
+#deleteAllNotess{
+  background-color: rgb(182, 0, 0);
+  font-size: 1vw;
+  color: white;
+  border-radius: .25vw;
+  cursor: pointer;
+  border: none;
+  width: 10vw;
+  padding: .5vh .5vw;
+  font-size: 1vw;
+  font-size: 1.2vw;
+  margin-left: 34vw;
+
+
+}
