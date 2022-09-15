@@ -313,10 +313,9 @@ function showNotes() {
 //This is our main function attached with submit button for when we click on it ie. below of text-area it will save our notes data and also show the notes in bottom.
 
 function collectText() {
-
-  if (document.activeElement === titleText || document.activeElement === notesText) {
+  
     document.activeElement.blur();
-  }
+ 
 
   //This is for fetching if our notes presented in local storage.
   let notes = localStorage.getItem("notesDataWithEditFeature");
