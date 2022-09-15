@@ -542,7 +542,7 @@ display: none
     position: fixed;
     bottom: 0;
     width: 100%;
-    display: flex;
+    display: none;
     bottom: 0vh;
     justify-content: center;
     font-size: .6rem;
