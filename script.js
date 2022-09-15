@@ -108,7 +108,7 @@ function hideAfterSubmit() {
   addNewNotesClass[0].style.display = "flex";
   notesMainContainer.style.display = "grid";
   savedNotesWelcomeAreaBarParent.style.display = "block";
-  hideDeveloperName();
+  //hideDeveloperName();
 
 
 }
@@ -131,7 +131,7 @@ function showAfterAddNewNotes() {
 
 
   titleText.focus();
-  hideDeveloperName();
+  //hideDeveloperName();
   
 }
 
