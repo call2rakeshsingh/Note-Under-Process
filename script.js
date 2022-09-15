@@ -108,7 +108,7 @@ function hideAfterSubmit() {
   addNewNotesClass[0].style.display = "flex";
   notesMainContainer.style.display = "grid";
   savedNotesWelcomeAreaBarParent.style.display = "block";
-  //hideDeveloperName();
+  // hideDeveloperName();
 
 
 }
@@ -131,7 +131,7 @@ function showAfterAddNewNotes() {
 
 
   titleText.focus();
-  //hideDeveloperName();
+  // hideDeveloperName();
   
 }
 
@@ -297,10 +297,8 @@ function showNotes() {
 
   if(imptortantNotesPageID.checked == true){
     importantNotesPage();
-    window.scrollTo(0, document.body.scrollHeight);
   } else{
     allNotesPage();
-    window.scrollTo(0, document.body.scrollHeight);
   }
 
 }
@@ -315,6 +313,10 @@ function showNotes() {
 //This is our main function attached with submit button for when we click on it ie. below of text-area it will save our notes data and also show the notes in bottom.
 
 function collectText() {
+
+  if (document.activeElement === titleText || document.activeElement === notesText) {
+    document.activeElement.blur();
+  }
 
   //This is for fetching if our notes presented in local storage.
   let notes = localStorage.getItem("notesDataWithEditFeature");
@@ -423,7 +425,7 @@ function collectText() {
   addNewNotes.checked = false;
 
   //This is for scroll to bottom where new notes is added. It is working on cumputer but not in mobile. I think may be for developer tag. 
-  
+  window.scrollTo(0, document.body.scrollHeight);
 }
 
 
