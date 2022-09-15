@@ -65,8 +65,7 @@ const developerNameDiv = document.getElementById("developerNameDiv");       //Yo
 
 //When we reload page or open this page it will check if there is no notes then by default writing area will be active
 addEventListener('load',showNotes);
-addEventListener('keyup', hideDeveloperName);
-addEventListener('click', hideDeveloperName);
+addEventListener('load', hideDeveloperName);
 
 
 
@@ -109,6 +108,7 @@ function hideAfterSubmit() {
   addNewNotesClass[0].style.display = "flex";
   notesMainContainer.style.display = "grid";
   savedNotesWelcomeAreaBarParent.style.display = "block";
+  hideDeveloperName();
 
 
 }
@@ -129,7 +129,10 @@ function showAfterAddNewNotes() {
   notesMainContainer.style.display = "none";
   savedNotesWelcomeAreaBarParent.style.display = "none";
 
+
   titleText.focus();
+  hideDeveloperName();
+  
 }
 
 
@@ -148,8 +151,8 @@ function hideAndShowTextArea() {
     notesMainContainer.style.display = "grid";
     window.scrollTo(0, 0);
     
-    
   }
+
   else if (addNewNotes.checked == false && addNewNotes.disabled != true && imptortantNotesPageID.checked == false) {
     showAfterAddNewNotes();
     window.scrollTo(0, 0);
