@@ -17,33 +17,36 @@
       <label for="addNewNotes" class="addNewNotesClass" onclick="hideAndShowTextArea()"><img src="new-notes.png" alt=""
           srcset="" /></label>
 
-      <ul class="dropdown">
+      <ul id="dropdown">
+        <input type="checkbox" name="" id="dropDownShowHide">
+        <label for="dropDownShowHide" onclick="forDropdown()">
         <div class="dropbtn">
           <img src="advance-search.png" alt="dropdown button" class="dropimg" />
         </div>
-        <div class="list">
+      </label>
+        <div id="list">
           <form>
             <input type="radio" id="inTitleSearch" name="fav_language" value="HTML" class="radioSearch" />
-            <label for="inTitleSearch" class="a">In Title</label>
+            <label for="inTitleSearch" class="a">In Title</label><br>
             <input type="radio" id="inNotesSearch" name="fav_language" value="CSS" class="radioSearch" />
-            <label for="inNotesSearch" class="a">In Notes</label>
+            <label for="inNotesSearch" class="a">In Notes</label><br>
             <input type="radio" id="inDateSearch" name="fav_language" value="JavaScript" class="radioSearch" />
-            <label for="inDateSearch" class="a">In Date</label>
+            <label for="inDateSearch" class="a">In Date</label><br>
             <input type="radio" id="inAllNotes" name="fav_language" value="New Bal" class="radioSearch" checked />
-            <label for="inAllNotes" class="a">In All Notes</label>
+            <label for="inAllNotes" class="a">In All Notes</label><br>
           </form>
         </div>
       </ul>
 
       <input type="text" placeholder="search here" id="searchText" onkeyup="searchTextFunc()" />
       <input type="button" id="clearSearchBox" value="X" onclick="clearSearchBoxFunc()" />
-    </nav>
-    <div id="welcomeTagDiv">
-      <h3 id="welcomeTag">Welcome to our notes app</h3>
 
       <input type="checkbox" name="imptortantNotesPageID" id="imptortantNotesPageID" />
       <label for="imptortantNotesPageID" class="imptortantNotesPageClass" onclick="importantNotesList()"><img
-          src="grayHeart.png" alt="" srcset="" /></label>
+          src="whiteHeart.png" alt="" srcset="" /></label>
+    </nav>
+    <div id="welcomeTagDiv">
+      <h3 id="welcomeTag">Welcome to our notes app</h3>
     </div>
   </div>
 
