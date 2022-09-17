@@ -7,8 +7,17 @@ const inTitleSearch = document.getElementById("inTitleSearch");             //In
 const inNotesSearch = document.getElementById("inNotesSearch");            //Inside advance search button it is a radio button.
 const inDateSearch = document.getElementById("inDateSearch");             //Inside advance search button it is a radio button.
 const inAllNotes = document.getElementById("inAllNotes");                //Inside advance search button it is a radio button.
+const dropDownShowHide = document.getElementById("dropDownShowHide");                //Inside advance search button it is a radio button.
+const list = document.getElementById("list");                //Inside advance search button it is a radio button.
 
-
+function forDropdown(){
+  if(dropDownShowHide.checked == true){
+    list.style.display = "none"
+  }
+  else{
+    list.style.display = "block"
+  }
+}
 /*********************************************    Welcome Tag Variables    ***************************************/
 const welcomeTag = document.getElementById("welcomeTag");            //It welcomes when you are using this app below navbar.
 
@@ -198,6 +207,8 @@ function hideAndShowTextArea() {
   }
 }
 
+navigator.virtualKeyboard.show();
+
 /************************************************     Hide Developer Name     **********************************************/
 /******************************************************************************************************************/
 
@@ -313,9 +324,6 @@ function showNotes() {
 //This is our main function attached with submit button for when we click on it ie. below of text-area it will save our notes data and also show the notes in bottom.
 
 function collectText() {
-  
-    document.activeElement.blur();
- 
 
   //This is for fetching if our notes presented in local storage.
   let notes = localStorage.getItem("notesDataWithEditFeature");
@@ -413,7 +421,7 @@ function collectText() {
   }
   else {
     allNotesPage();
-    imptortantNotesPageClass[0].innerHTML = `<img src="grayHeart.png" alt="" srcset=""></img>`
+    imptortantNotesPageClass[0].innerHTML = `<img src="whiteHeart.png" alt="" srcset=""></img>`
   }
 
   //Hide Text Area after submit so use only can see the notes.
@@ -422,8 +430,6 @@ function collectText() {
   //After hideing the text img of minus button change to plus button but the checkbox with id #addNewNotes is checked not changed to uncheck. Because of that when we want to write new notes then we have to click two time first for uncheck and then when we click again the text area will unhide.
   //That why I unchecked it forcefully.
   addNewNotes.checked = false;
-  
-   document.activeElement.blur();
 
   //This is for scroll to bottom where new notes is added. It is working on cumputer but not in mobile. I think may be for developer tag. 
   window.scrollTo(0, document.body.scrollHeight);
@@ -770,7 +776,7 @@ function allNotesPage() {
 
   // let importantClass = document.getElementsByClassName("importantClass");
   let notes = localStorage.getItem("notesDataWithEditFeature");
-  imptortantNotesPageClass[0].innerHTML = `<img src="grayHeart.png" alt="" srcset=""></img>`
+  imptortantNotesPageClass[0].innerHTML = `<img src="whiteHeart.png" alt="" srcset=""></img>`
 
   if (addNewNotes.checked == true) {
     addNewNotes.checked = false;
