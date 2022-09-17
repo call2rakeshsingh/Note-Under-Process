@@ -32,7 +32,7 @@ html{
     height: 4rem;
     border: none;
     background-color: white;
-    z-index: 100;
+    z-index: 1;
 }
 
 #welcomeTag{
@@ -107,7 +107,7 @@ html{
 }
 
 
-.dropdown {
+#dropdown {
     position: absolute;
     display: flex;
     height: 1.5rem;
@@ -121,7 +121,7 @@ html{
 #searchText{
     display: flex;
     margin-left: 22vw;
-    width: 60vw;
+    width: 47vw;
     height: 1.3rem;
     padding: .21rem 2vw .21rem 11vw;
     font-size: 4vw;
@@ -138,24 +138,24 @@ html{
 }
 
 
-.list {
+#list {
     display: none;
     position: absolute;
-    min-width: 25vw;
+    min-width: 33vw;
     min-height: 8rem;
     margin-top: 2.5rem;
     margin-left: -.8vw;
     padding-top: .21rem;
     list-style: none;
-    /* z-index: 1; */
+    z-index: 100;
     box-sizing: border-box;
 }
 
-.list::before {
+#list::before {
     content: "";
     position: absolute;
     background-color: rgb(23, 0, 59);
-    min-width: 30vw;
+    min-width: 35vw;
     min-height: 8.5rem;
     list-style: none;
     border-radius: 0px 0px 10px 10px;
@@ -163,15 +163,19 @@ html{
     opacity: .9;
 }
 
-.radioSearch{
+#dropDownShowHide{
     display: none;
 }
 
-.navbar ul .list .a {
-    display: flex;
+/* .radioSearch{
+    display: none;
+} */
+
+.navbar ul #list .a {
+    display: inline-block;
     align-items: center;
     color: white;
-    width: 25vw;
+    width: 24vw;
     height: 7vw;
     padding: .1vh 0vw .1vh 2.5vw;
     font-size: 4vw;
@@ -182,13 +186,13 @@ html{
 
 }
 
-.navbar ul .list .a:active {
+.navbar ul #list .a:active {
     background-color: white;
     color: black;
 }
 
-.dropdown:hover .list {
-    display: block;
+#dropdown:hover #list {
+    /* display: block; */
     z-index: 10000;
 }
 
@@ -323,7 +327,7 @@ display: none
     position: absolute;
     display: flex;
     /* border: 1vw solid black; */
-    margin-left: 82vw;
+    margin-left: 88vw;
 }
 
 .imptortantNotesPageClass img{
@@ -542,7 +546,7 @@ display: none
     position: fixed;
     bottom: 0;
     width: 100%;
-    display: none;
+    display: flex;
     bottom: 0vh;
     justify-content: center;
     font-size: .6rem;
